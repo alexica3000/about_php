@@ -7,12 +7,8 @@ require_once 'bootstrap.php';
 
 $router = new \App\Router();
 
-$router->get('/',     function() {
-    return 'home';
-});
-$router->get('about', function() {
-    return 'about';
-});
+$router->get('/',      \App\Controllers\Controller::class . '@index');
+$router->get('/about', \App\Controllers\Controller::class . '@about');
 
 $application = new \App\Application($router);
 
