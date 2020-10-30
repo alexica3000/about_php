@@ -13,7 +13,6 @@ class Application
 
     public function run()
     {
-        $action = $_SERVER['REQUEST_URI'];
-        $this->router->dispatch($action);
+        $this->router->dispatch();
     }
 }

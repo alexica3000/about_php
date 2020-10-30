@@ -12,9 +12,9 @@ class Router
         $this->routes[$action] = $callback;
     }
 
-    public function dispatch($action)
+    public function dispatch()
     {
-        $action = trim($action, '/');
+        $action = trim($_SERVER['REQUEST_URI'], '/');
 
         if (!array_key_exists($action, $this->routes)) {
             echo 'Page not exist.';

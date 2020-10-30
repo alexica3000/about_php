@@ -4,15 +4,10 @@ namespace BoxBalls;
 
 class Ball
 {
-    private static int $count = 0;
+    public static int $count = 0;
 
-    public function increase()
+    public function __construct()
     {
-        return static::$count++;
-    }
-
-    public function getCount()
-    {
-        return static::$count;
+        static::$count++;
     }
 }

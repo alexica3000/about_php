@@ -7,11 +7,10 @@ use BoxBalls\Ball;
 use BoxBalls\Box;
 
 $box = new Box();
-$ball = new Ball();
 
 for($i = 0; $i < rand(1, 10); $i++) {
-    $box->putBall($ball);
+    $box->putBall(new Ball());
 }
 
 echo '<br><br>';
-echo 'In the box are ' . $ball->getCount() . ' balls.' . PHP_EOL;
+echo 'In the box are ' . Ball::$count . ' balls.' . PHP_EOL;

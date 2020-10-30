@@ -1,5 +1,5 @@
 <?php
 
-require_once 'src/application.php';
-require_once 'src/router.php';
-require_once 'src/controllers/controller.php';
+require_once 'src/Application.php';
+require_once 'src/Router.php';
+require_once 'src/controllers/Controller.php';
