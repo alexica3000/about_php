@@ -1,5 +1,5 @@
 <?php
-
+/*
 class Exception implements Throwable
 {
     protected $message = 'Unknown exception'; // message exception
@@ -24,3 +24,4 @@ class Exception implements Throwable
     final public function getPrevious(); // previous exception
     final public function getTraceAsString(); // from formatted trace string
 }
+*/
