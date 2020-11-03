@@ -18,6 +18,8 @@ class UserFormValidator
         if ($post['email'] == '' OR !filter_var($post['email'], FILTER_VALIDATE_EMAIL)) {
             throw new Exception('Email does not have the correct format.');
         }
+
+        return true;
     }
 }
 
@@ -33,7 +35,7 @@ if (!empty($_POST)) {
 
 function showError($error, $success)
 {
-    if (empty($success) AND empty($_POST)) {
+    if ($success === false AND empty($_POST)) {
         return;
     }
 
@@ -67,7 +69,7 @@ function showError($error, $success)
 
                     <? showError($error, $success) ?>
 
-                    <form action="#" method="post">
+                    <form action="" method="post">
                         <div class="form-group">
                             <label for="name">Name:</label>
                             <input type="name" name="name" class="form-control" placeholder="Enter name" id="name">
